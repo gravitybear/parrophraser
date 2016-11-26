@@ -13,9 +13,7 @@ $(".acknowledge").on("click", function(){
 });
 
 $(window).on("click", function(event){
-	//if event.target == document.getElementByClassName("dim_overlay") {
-		back.addClass("hide");
-	//}
+	back.addClass("hide");
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
