@@ -1,23 +1,92 @@
-.background {
+.dim_overlay {
   height:100%;
   width:100%;
   background-color: rgba(0, 0, 0, 0.57);
   position:fixed;
   top:0px;
   left:0px;
-  z-index: 1000000;
+  z-index: 9000000;
 }
-.panel {
-  background: white;
-  width: 500px;
-  height: 200px;
-  position: fixed;
-  left: 50%;
-  margin-left: -350px;
-  top: 100px;
-  border-radius: 5px;
-  padding: 50px;
-}
+
 .hide {
   display: none;
+}
+
+#pop-up {
+  font-size: 20px;
+  font-family: "Arial";
+}
+
+.selection-panel {
+  border-radius: 3px;
+  background-color: #E6E6E6;
+  width: 600px;
+  margin: auto;
+  padding: 12px;
+  height: 400px;
+  overflow:auto;
+  position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.card-content {
+  width: 86%;
+  max-height:40%;
+  margin: auto;
+  position: absolute;
+    top: 5%; left: 0; bottom: 0; right: 0;
+}
+
+button {
+  border-radius: 3px;
+  background-color: #268CC4;
+  font-size: 16px;
+  color:white;
+  font-style:bold;
+  border: none;
+  text-align: center;
+}
+
+#textbutton {
+  padding: 10px 16px;
+  position:absolute;
+    bottom:12px;
+    right:12px;
+
+}
+button:hover {
+    background-color: #4CAF50;
+}
+
+
+#logo-medium {
+    opacity: 0.5;
+    position:absolute;
+    bottom:12px;
+    left:12px;
+    height:35px;
+}
+
+#edit, #settings {
+  margin:4px;
+  float:left;
+  height: 44px;
+  width: 44px;
+}
+
+#icon {
+  padding-top: 4px;
+  height:32px;
+  margin:auto;
+}
+
+.card-title {
+  position: absolute;
+  top: 10%; left: 7%; 
+  font-size: 24px;
+  max-height: 52px;
+  max-width: 83%;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
