@@ -1,4 +1,4 @@
-var back = $("<div class='dim_overlay hide'><span class='close'></span></div>").appendTo(body);
+var back = $("<div class='dim_overlay hide'></div>").appendTo(body);
 var panel = $(`<div class = 'selection-panel'>
 			<h3 class='card-title'></h3>
 			<p class='card-content'></p>
@@ -8,13 +8,12 @@ var panel = $(`<div class = 'selection-panel'>
 			<button class='acknowledge' id='textbutton'><span class='close'></span>continue</button>
 		</div>`).appendTo(back);
 
-$(".acknowledge").on("click", function(){
-	back.addClass("hide");
-});
 
-$(window).on("click", function(event){
+function hide(event){
+	console.log(event)
 	back.addClass("hide");
-});
+}
+$(".acknowledge").on("click", hide);
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   panel.children()[0].innerHTML = request.message.title;
