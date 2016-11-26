@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'",
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
+  "name": "Parrophraser",
+  "description": "Paraphrase educational videos and text documents for flash cards, and alerts.",
   "version": "1.0",
   "browser_action": {
     "default_icon": "icon.png",
@@ -10,7 +10,7 @@
     "default_title": "Parrophraser"
   },
   "background": {
-    "scripts": ["jquery.min.js", "firebase.min.js","background.js"]
+    "scripts": ["jquery.min.js", "firebase.min.js", "background.js"]
   },
   "content_scripts": [
     {
@@ -23,6 +23,7 @@
     "contextMenus",
     "https://api.quizlet.com/",
     "https://www.gstatic.com/",
-    "tabs"
+    "tabs",
+    "identity"
   ]
 }

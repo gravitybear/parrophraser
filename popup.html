@@ -7,6 +7,7 @@
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
+        background: rgb(249, 249, 249);
       }
 
       .cardListItemTemplate {display: none}
@@ -16,6 +17,7 @@
         margin: 5px;
         border: 1px solid rgb(236, 236, 236);
         border-radius: 4px;
+        background: white;
       }
 
       .cardListItem:hover {
@@ -26,17 +28,28 @@
         background: rgb(238, 238, 238);
       }
 
+      #logo-med {
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        background: url("./logo-medium-icon.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+      }
+
     </style>
     <script src="jquery.min.js"></script>
-    <script src="popup.js"></script>
   </head>
   <body>
+    <div id="logo-med" src="./logo-medium-icon.png" ></div>
     <div id = "cards" style="width: 300px">
       <div class="cardListItemTemplate">
-        <div class="card-title">Title</div>
-        <div class="card-content">dsjfksdjfksdjaf sdf dskf sdjkfj dskfj dsfsdf sdf ds f dsf ds vxcv cx vdsfdsf sdf sdfsdfdsf  sdfsdf sdfsdfsdf  sdfsdf dsjfksdjfksdjaf sdf dskf sdjkfj dskfj dsfsdf sdf ds f dsf ds vxcv cx vdsfdsf sdf sdfsdfdsf  sdfsdf sdfsdfsdf  sdfsdf dsjfksdjfksdjaf sdf dskf sdjkfj dskfj dsfsdf sdf ds f dsf ds vxcv cx vdsfdsf sdf sdfsdfdsf  sdfsdf sdfsdfsdf  sdfsdf dsjfksdjfksdjaf sdf dskf sdjkfj dskfj dsfsdf sdf ds f dsf ds vxcv cx vdsfdsf sdf sdfsdfdsf  sdfsdf sdfsdfsdf  sdfsdf</div>
-        <div class="card-content">...</div>
+        <div class="card-title"></div>
+        <div class="card-content"></div>
       </div>
     </div>
+    <script src="popup.js"></script>
   </body>
 </html>

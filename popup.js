@@ -1,5 +1,3 @@
-var self = this;
-
 // Background
 function ensureSendMessage(tabId, message, callback){
   chrome.tabs.sendMessage(tabId, {ping: true, message: message}, function(response){
