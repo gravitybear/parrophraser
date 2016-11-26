@@ -12,11 +12,6 @@
   display: none;
 }
 
-#pop-up {
-  font-size: 20px;
-  font-family: "Arial";
-}
-
 .selection-panel {
   border-radius: 3px;
   background-color: #E6E6E6;
@@ -26,7 +21,9 @@
   height: 400px;
   overflow:auto;
   position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+  font-size:18px;
+  font-family: "Arial";
+  top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .card-content {
@@ -34,7 +31,7 @@
   max-height:40%;
   margin: auto;
   position: absolute;
-    top: 5%; left: 0; bottom: 0; right: 0;
+  top: 5%; left: 0; bottom: 0; right: 0;
 }
 
 button {
@@ -50,10 +47,14 @@ button {
 #textbutton {
   padding: 10px 16px;
   position:absolute;
-    bottom:12px;
-    right:12px;
-
+  bottom:12px;
+  right:12px;
 }
+
+#back {
+  background-color:#D32F2F;
+}
+
 button:hover {
     background-color: #4CAF50;
 }
@@ -63,11 +64,11 @@ button:hover {
     opacity: 0.5;
     position:absolute;
     bottom:12px;
-    left:12px;
-    height:35px;
+    left:17px;
+    height:46px;
 }
 
-#edit, #settings {
+#edit, #settings, #back {
   margin:4px;
   float:left;
   height: 44px;
@@ -80,13 +81,30 @@ button:hover {
   margin:auto;
 }
 
+
 .card-title {
   position: absolute;
-  top: 10%; left: 7%; 
+  top: 12%; left: 7%; 
   font-size: 24px;
   max-height: 52px;
   max-width: 83%;
   overflow:hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+#input-title, #input-content{
+  position:absolute;
+  top: 25%; left: 7%;
+  width: 85%;
+  height:24px;
+  text-align:left;
+  float:left;
+}
+
+#input-content{
+  position:absolute;
+  top: 35%;
+  height: 40%;
+  max-height: 40%
 }
