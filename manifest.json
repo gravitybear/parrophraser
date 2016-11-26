@@ -19,6 +19,9 @@
       "css": ["content_style.css"]
     }
   ],
+  "icons": {
+    "16": "icon.png"
+  },
   "permissions": [
     "contextMenus",
     "https://api.quizlet.com/",
