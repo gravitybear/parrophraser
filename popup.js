@@ -29,12 +29,11 @@ chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
 
     node.on("click", function(){
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        ensureSendMessage(tabs[0].id, {type: "card", title: item.title, content: item.content});
+        ensureSendMessage(tabs[0].id, {title: item.title, content: item.content, index: item.index});
       });
     });
 
     $("#cards").append(node);
-
 
   });
 });
