@@ -49,8 +49,12 @@ button {
   position:absolute;
   bottom:12px;
   right:12px;
-
 }
+
+#back {
+  background-color:#D32F2F;
+}
+
 button:hover {
     background-color: #4CAF50;
 }
@@ -60,11 +64,11 @@ button:hover {
     opacity: 0.5;
     position:absolute;
     bottom:12px;
-    left:12px;
-    height:35px;
+    left:17px;
+    height:46px;
 }
 
-#edit, #settings {
+#edit, #settings, #back {
   margin:4px;
   float:left;
   height: 44px;
@@ -77,6 +81,7 @@ button:hover {
   margin:auto;
 }
 
+
 .card-title {
   position: absolute;
   top: 12%; left: 7%; 
@@ -86,4 +91,20 @@ button:hover {
   overflow:hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+#input-title, #input-content{
+  position:absolute;
+  top: 25%; left: 7%;
+  width: 85%;
+  height:24px;
+  text-align:left;
+  float:left;
+}
+
+#input-content{
+  position:absolute;
+  top: 35%;
+  height: 40%;
+  max-height: 40%
 }
