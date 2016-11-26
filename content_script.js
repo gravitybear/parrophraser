@@ -1,4 +1,4 @@
-var back = $("<div class='dim_overlay hide'><span class='close'></span></div>").appendTo(body);
+var back = $("<div class='dim_overlay hide'><span class='close'></span></div>").appendTo("body");
 var panel = $(`<div class = 'selection-panel'>
 			<h3 class='card-title'></h3>
 			<p class='card-content'></p>
@@ -17,7 +17,7 @@ $(window).on("click", function(event){
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  panel.children()[0].innerHTML = request.message.title;
-  panel.children()[1].innerHTML = request.message.content;
-  back.removeClass("hide");
+    panel.children()[0].innerHTML = request.message.title;
+    panel.children()[1].innerHTML = request.message.content;
+    back.removeClass("hide");
 });

@@ -1,9 +1,7 @@
-var self = this;
-
 // Background
 function ensureSendMessage(tabId, message, callback){
   chrome.tabs.sendMessage(tabId, {ping: true, message: message}, function(response){
-    if(response.pong) { // Content script ready
+    if(response) { // Content script ready
       chrome.tabs.sendMessage(tabId, message, callback);
     } else { // No listener on the other end
       chrome.tabs.executeScript(tabId, {file: "content_script.js"}, function(){
@@ -31,7 +29,7 @@ chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
 
     node.on("click", function(){
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        ensureSendMessage(tabs[0].id, {title: item.title, content: item.content});
+        ensureSendMessage(tabs[0].id, {type: "card", title: item.title, content: item.content});
       });
     });
 

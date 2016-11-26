@@ -22,7 +22,9 @@ ref.on("child_added", function(snapshot, prevChildKey) {
 
 // Add handshake for popupjs
 chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
-  chrome.runtime.sendMessage({items: self.items},function(response){});
+  if (message.data == "Handshake"){
+    chrome.runtime.sendMessage({items: self.items},function(response){});
+  }
 });
 
 
@@ -63,5 +65,5 @@ function handleTextSelect(info, tab) {
 }
 
 
-var id = chrome.contextMenus.create({"title": "Parrophraser", "contexts":["selection"],
+var id = chrome.contextMenus.create({"title": "Parrophraser", "contexts":["selection","video"],
                                      "onclick": handleTextSelect});
