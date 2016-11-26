@@ -1,0 +1,23 @@
+.background {
+  height:100%;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.57);
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index: 1000000;
+}
+.panel {
+  background: white;
+  width: 500px;
+  height: 200px;
+  position: fixed;
+  left: 50%;
+  margin-left: -350px;
+  top: 100px;
+  border-radius: 5px;
+  padding: 50px;
+}
+.hide {
+  display: none;
+}
