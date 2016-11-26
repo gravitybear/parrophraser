@@ -54,7 +54,7 @@ function getAnnotatedText(text, numOfCards){
 function generateCard(sentence){
   var i = items.length+1;
   var title = sentence.split(" ")[0];
-  database.ref("/"+i).set({title: title, content: sentence});
+  database.ref("/"+i).set({title: title, content: sentence, index: i});
 }
 
 function handleTextSelect(info, tab) {
